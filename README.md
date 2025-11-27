@@ -108,8 +108,8 @@ To run this pipeline locally, follow these steps. The system is designed to be s
 
 **1. Clone the repository**
 ```bash
-git clone [https://github.com/YOUR_USERNAME/payments_fx_pipeline.git](https://github.com/YOUR_USERNAME/payments_fx_pipeline.git)
-cd payments_fx_pipeline
+git clone https://github.com/EMen11/payments_fx_pipeline.git
+cd payments_fx_pipelin
 ```
 **2. Set up the environment**
 It is recommended to use a virtual environment to manage dependencies to avoid conflicts.
