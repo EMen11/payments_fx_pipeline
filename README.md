@@ -61,7 +61,7 @@ Once data is reconciled, it flows into two parallel streams:
 
 ---
 
-##  5. Financial & Statistical Methodologies
+##   Financial & Statistical Methodologies
 
 This project goes beyond simple data processing; it implements industry-standard financial models and statistical algorithms to ensure the results are robust enough for decision-making.
 
@@ -88,7 +88,7 @@ Traditional rule-based audits (e.g., "if amount > 10k") generate too many false 
 * **Why Unsupervised?** We do not have "labeled" fraud data. This algorithm isolates anomalies by randomly selecting a feature and randomly selecting a split value.
 * **The Logic:** Anomalies are "few and different." They are isolated in fewer steps (shorter path lengths in the tree) than normal observations. This allows the system to flag "Unknown Unknowns"—irregularities that human auditors didn't know they needed to look for.
 
-## 🛠️ 6. Tech Stack & Installation
+##  Tech Stack & Installation
 
 This project is built with a modular structure to separate data generation, processing, and analysis, adhering to clean code principles.
 
@@ -138,7 +138,7 @@ python src/main.py
 
 ##  Author
 
-**[Elie Menassa]**
+**Elie Menassa**
 * **Focus:** Bridging the gap between Financial Operations and Data Science through automation.
 
 *Open to feedback and collaboration on FinOps automation and Risk Management topics.*
