@@ -72,15 +72,18 @@ Standard reconciliation scripts often use `Inner Joins` (matching only perfect p
 * **The Financial Reason:** In Treasury, a missing record (a payment sent but not received, or an unauthorized bank debit) is a higher risk than a mismatched amount.
 * **Outcome:** This guarantees **Completeness Assurance**, ensuring that 100% of transactions from both the Ledger (ERP) and the Bank Statement are accounted for, visualizing "Breaks" on both sides.
 
+
 ### B. Risk Engine: Monte Carlo & Geometric Brownian Motion
 To forecast future FX exposure, the pipeline moves away from linear extrapolation and uses **Stochastic Calculus**.
 
 * **The Model:** I utilized **Geometric Brownian Motion (GBM)** to simulate currency path evolution.
 * **The Formula:**
-    $$dS_t = \mu S_t dt + \sigma S_t dW_t$$
-    * *Where $\mu$ is the drift (trend), $\sigma$ is the volatility (risk), and $dW_t$ is the Wiener process (random shock).*
-* **The Application:** By running 1,000+ simulations per currency pair, the engine calculates the **Value at Risk (VaR 95%)**, providing the CFO with a "Worst Case Scenario" probability rather than a simple average.
+  $$dS_t = \mu S_t dt + \sigma S_t dW_t$$
 
+  * *Where **μ** is the drift (trend), **σ** is the volatility (risk), and **dWt** is the Wiener process (random shock).*
+
+* **The Application:** By running 1,000+ simulations per currency pair, the engine calculates the **Value at Risk (VaR 95%)**, providing the CFO with a "Worst Case Scenario" probability rather than a simple average.
+* 
 ### C. AI Audit: Unsupervised Anomaly Detection
 Traditional rule-based audits (e.g., "if amount > 10k") generate too many false positives and fail to catch complex fraud schemes.
 
@@ -107,7 +110,7 @@ To run this pipeline locally, follow these steps. The system is designed to be s
 ```bash
 git clone [https://github.com/YOUR_USERNAME/payments_fx_pipeline.git](https://github.com/YOUR_USERNAME/payments_fx_pipeline.git)
 cd payments_fx_pipeline
-
+```
 **2. Set up the environment**
 It is recommended to use a virtual environment to manage dependencies to avoid conflicts.
 
@@ -129,7 +132,7 @@ pip install -r requirements.txt
 Execute the main orchestration script. This triggers the full ETL flow: Data Generation → Cleaning → Reconciliation → ML Analysis → Export.
 
 ```bash
-python src/main.py
+python python main.py
 ```
 
 *Output: Check the `/data/processed/` folder for `final_report_with_anomalies.csv`, which serves as the source for the Power BI dashboard.*
