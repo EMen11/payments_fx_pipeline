@@ -138,7 +138,51 @@ python python main.py
 *Output: Check the `/data/processed/` folder for `final_report_with_anomalies.csv`, which serves as the source for the Power BI dashboard.*
 
 ---
+##  Roadmap & Production-Grade Improvements
 
+This project is designed as a clear and functional Proof of Concept (POC).  
+To migrate it toward an industry-ready production pipeline, the following improvements would be required:
+
+### 1. **Storage Layer**
+- Replace CSV exports with a relational or analytical database (PostgreSQL, Snowflake, or DuckDB).
+- Implement structured schemas for:
+  - transactions  
+  - market data  
+  - reconciliation results  
+  - analytics outputs  
+
+### 2. **Orchestration & Scheduling**
+- Replace the linear `main.py` workflow with an orchestrator such as **Apache Airflow**, **Prefect**, or **Dagster**.
+- Add:
+  - retry logic  
+  - task dependency management  
+  - failure alerts/notifications  
+
+### 3. **Testing & Validation**
+- Add unit tests (pytest) for core financial logic:
+  - FX spread calculations  
+  - VaR simulation  
+  - reconciliation rules  
+- Add data validation with tools like **Great Expectations** to ensure data quality end-to-end.
+
+### 4. **Containerization & Reproducibility**
+- Package the pipeline with **Docker** for consistent execution across environments.
+- Add a `docker-compose.yml` to orchestrate local services (database, pipeline, dashboards).
+
+### 5. **CI/CD Automation**
+- Integrate GitHub Actions to automate:
+  - linting (flake8, black)
+  - testing (pytest)
+  - building Docker images
+  - validating pull requests
+
+### 6. **Monitoring & Logging**
+- Replace print statements with structured logs using Python's `logging` module.
+- Add monitoring (Grafana/Prometheus or lightweight alternatives) for long-running or scheduled pipelines.
+
+---
+
+This roadmap outlines the natural evolution path from a clean Proof of Concept to a deployment-ready financial analytics pipeline.
 ##  Author
 
 **Elie Menassa**
