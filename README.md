@@ -1,4 +1,4 @@
-# 🏦 End-to-End Payments Reconciliation & FX Risk Engine
+#  End-to-End Payments Reconciliation & FX Risk Engine
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -31,7 +31,7 @@ The technical output feeds a **Power BI Executive Dashboard**, enabling CFOs and
 ![AI View](dashboards/dashboard_03_ml_anomalies.jpg)
 
 ---
-## 🏗️ Architecture & Pipeline
+## Architecture & Pipeline
 
 The project follows a modular **ETL (Extract, Transform, Load)** architecture, designed to ensure data integrity from ingestion to reporting.
 
@@ -61,7 +61,7 @@ Once data is reconciled, it flows into two parallel streams:
 
 ---
 
-## 💰 5. Financial & Statistical Methodologies
+##  5. Financial & Statistical Methodologies
 
 This project goes beyond simple data processing; it implements industry-standard financial models and statistical algorithms to ensure the results are robust enough for decision-making.
 
