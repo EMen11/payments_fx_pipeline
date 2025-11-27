@@ -20,15 +20,15 @@ The technical output feeds a **Power BI Executive Dashboard**, enabling CFOs and
 
 ### 1. Operations View: Reconciliation Health
 *A control tower for Ops teams. It visualizes match rates and isolates discrepancies (Missing Cash, Status Mismatches) for immediate investigation.*
-![Ops View](dashboards/dashboard_01_ops_reconciliation.jpg)
+![Ops View](dashboard/dashboard_01_ops_reconciliation.jpg)
 
 ### 2. Finance View: P&L & FX Risk
 *A financial view for the CFO. It analyzes realized losses (Hidden Costs) by currency and projects future exposure using the Monte Carlo Value at Risk (VaR) model.*
-![Finance View](dashboards/dashboard_02_fx_risk_pnl.jpg)
+![Finance View](dashboard/dashboard_02_fx_risk_pnl.jpg)
 
 ### 3. AI Audit View: Anomaly Detection
 *Advanced scatter plot visualizing the Isolation Forest algorithm results. The model automatically isolates anomalies (Red/Orange points) from standard transactions, prioritizing audit efforts based on an anomaly score.*
-![AI View](dashboards/dashboard_03_ml_anomalies.jpg)
+![AI View](dashboard/dashboard_03_ml_anomalies.jpg)
 
 ---
 ## Architecture & Pipeline
